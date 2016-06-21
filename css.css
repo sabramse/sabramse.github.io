@@ -3,16 +3,12 @@ body {
 	background-color: white;
 	margin-top: 200px;
 	margin-bottom: 200px;
-<<<<<<< HEAD
-	margin-right: 200px;
-=======
 	margin-right: 400px;
->>>>>>> 25aa51d4c647ebb71194e4f81acab6d7daaed7a7
-	margin-left: 400px;
+	margin-left: 200px;
 }
 
 * {
-	font-family: Georgia;
+	font-family: helvetica;
 }
 
 H4 {
