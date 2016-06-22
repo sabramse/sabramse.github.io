@@ -1,16 +1,20 @@
 
 body {
 	background-color: white;
-	margin-top: 200px;
+	margin-top: 150px;
 	margin-bottom: 150px;
 	margin-right: 400px;
 	margin-left: 200px;
 }
 
 * {
-	font-family: Helvetica;
+	font-family: georgia;
 }
 
 H4 {
 	display: inline;
+}
+
+.verticalLine {
+    border-left: thick solid #909090;
 }
