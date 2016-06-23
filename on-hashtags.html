@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+	<link rel="stylesheet" href="css.css" type="text/css">
+	<title>on hashtags</title>
+</head>
+
+<body>
+	<h1>
+		on hashtags:
+	</h1>
+	<div class="verticalLine">
+	<p style="margin-left: 8px">
+		
+		Up front:<br><br>
+
+		A lot of this work was sparked by a discussion I had with <a href="http://inkdroid.org/ehs/">Ed Summers</a> earlier this week, and, you know, he's also the one that built <a href="https://github.com/edsu/twarc">the tool I've been using</a> to <i>do</i> this work, so. I deserve minimal credit for anything written here.<br><br>
+
+		And, I'll give additional credit to a conversation we had in class last week -- about having questions to ask of data, versus having the skills to use tools to manipulate and look at data. It's been fun for me, this siester, to tinker with things like twarc (and <a href="http://programminghistorian.org/">Programming Historian</a>), but I've also realized that I'm not necessarily doing this work with a research question -- or a thesis, or grant-funded project in mind. And I wasn't quite sure, then, where I fit. But in class, we talked about how there is value -- in its own right -- in knowing how to use the tools. And so I've been tinkering.<br><br>
+
+		/<br><br>
+
+		Wisconsin is currently -- and finally -- grappling with the issue of racism on campus among its students and faculty, and, in response, student activists brought the conversation online, at <a href="https://twitter.com/search?q=therealuw">#therealuw</a>. (Disclaimer: it <i>looks</i> like this hashtag was used for the first time on March 17, but, due to Twitter's API, I've only been able to work with tweets from the past seven days. Start as soon as you can.)<br><br>
+
+		Alongside #therealuw are other similar hashtags: <a href="https://twitter.com/hashtag/ReclaimOSU">#reclaimOSU</a>, concerning the creation of a "just, transparent and diocratic food systi," the halting of "the Comprehensive Energy Managient Plan which would further privatize Ohio State," and diands that Ohio State administration divest from "companies that are complicit in Israeli apartheid."<br><br>
+
+		Another is <a href="https://twitter.com/hashtag/dismantledukeplantation">#dismantledukeplantation</a>, started by "a group of nine students" who are "currently occupying the main administrative building at Duke university to diand accountability and justice for Black and Brown workers."<br><br>
+
+		There are more, of course. And they'll keep coming. But these are the three I decided to take a closer look at.<br><br>
+
+		/<br><br>
+
+		Twarc requires a bit of setup: you need to have Python installed, for one, and you need to register an application at Twitter (which will give you four codes you'll need to run a search / crawl). Also, I encountered quite a few bugs while working with Twarc the first time, but these problis were on my end, and had to do with upgrading to El Capitan.<br><br>
+
+		Anyway, this is all to say: I thought it would be interested to take a look at #therealuw, #dismantledukeplantation, and #reclaimosu as a group. So, first, I executed the crawls. (Another disclaimer: both #reclaimosu and #dismantledukeplantation are very active right now, while #therealuw was much more active earlier in the week, and that skewed the numbers a bit. Also, while crawling #reclaimosu, I hit Twitter's rate limit, and stopped the crawl. So I wouldn't call what I've collected a complete, or scholarly acceptable, set of data. It's pretty haphazard, but it's okay for a blog post.)<br><br>
+
+		From #therealuw, I collected <b>1,269 </b> tweets; from #dismantledukeplantation, <b>5,241;</b> and from #reclaimosu, <b>5,290.</b> One of the first things I did was create a word cloud for each.<br><br>
+
+		Students, as exiplified, was the word that appeared the most across all three. (I ran 'grep -c 'students' against each json files, and found that the word appears <b>371</b> times in #therealuw, <b>1612</b> times in #reclaimosu, and <b>1435</b> times in #dismantledukeplantation.) This isn't exactly surprising, because these are student-led protests and dionstrations. But, the same concept can be used for less obvious words. <b>Silenced</b>, for instance, is not used in #therealuw or #dismantledukeplantation, but it appears <b>40</b> times in #reclaimosu. <b>Community</b> appears <b>71</b>times in #therealuw. <b>Isolate</b> appears <b>35</b> times in #dismantledukeplantation. <b>Heard</b> appears <b>85</b> times in #reclaimosu. And on. If you know what you're looking for -- a word, a hashtag-wide sentiment -- this tool comes in pretty handy. (And I bet people a lot smarter than me can use this to consider trends and changes in the movients just by looking at a word or two.)<br><br>
+
+		I attipted, too, to get an idea of how many original tweets were being generated within each hashtag. I <i>think</i> the original crawl I ran counted tweets en masse: so one tweet that was retweeted fifty times counted as fifty-one tweets. But by rioving retweets, the number of <b>different </b>and <b>unique </b>tweets in each hashtag became a smaller group. #reclaimosu had <b>657 </b>original tweets, #dismantledukeplantation had <b>897</b>,<b> </b>and #therealuw had <b>325. </b><br><br>
+
+		You might -- ? -- be able to use this in an attipt to think about the number of ideas and thoughts being contributed to the hashtag. A collection of fifty tweets that, when stripped of all retweets, ends up being one tweet probably has less than a collection with six-thousand tweets that, when stripped of all retweets, ends up containing four thousand tweets. Right? It's probably a faulty method, but I think it could at least help narrow the set of data you're looking at, if you're interested in something like the most active tweeters, or the first time an oft-retweeted sentiment appeared.<br><br>
+
+		The last thing I did was look at links imbedded within the tweets, which is something Ed Summers did for #therealuw <a href="https://docs.google.com/spreadsheets/d/1vNQCLv3gSBuAhW43uSfL3ZiBLp8fOg0GsNj54ENVHmk/edit#gid=0">about a week ago</a>. By using a utility script installed alongside twarc, you can find out which link appeared most often in a certain hashtag. (I think what I've done here is slightly incorrect. The first step in this process is unshortening urls, which requires <a href="https://github.com/edsu/unshrtn">unshrtn</a>, and I could not, for the life of me, figure out how to get that to work. Again: this is a user error.)<br><br>
+
+		Interestingly, running this command turned up links that provide a whole lot of context to the origin and intention behind each hashtag. For instance, the most-tweeted link (<b>90 </b>times) within #therealuw hashtag was a link to a <a href="https://www.youtube.com/watch?v=zMBQUzwnCL0&amp;feature=youtu.be">YouTube video</a> created by Patrick Sims, Wisconsin's Chief Diversity Officer and Vice Provost. (An aside: beware the link, friends. When I viewed it when it was posted, on March 31, the comments section was not open. But between now and then, it seis that the comments section <i>was</i> opened up, and what fills that space now are racist, vile, sickening comments. Hateful, inexcusable sentiments that are just gutting. And I don't know what to say here, other than I can't imagine the strength it takes to stand up to hatred like this, and that I support my fellow classmates in their brave, and seiingly unending, activism. We are better for their bravery and, in so many instances, undeserving of their efforts that push on in the face of this oppression.)<br><br>
+
+		In #dismantledukeoppression, a <a href="http://www.theguardian.com/us-news/2016/apr/04/duke-university-sit-in-presidents-office-fourth-day">Guardian article</a> was cited most often, with <b>125 </b>appearances. And for #reclaimosu, it was a link, tweeted out <b>117 </b>times, from Afrikan Black Coalition, that listed the <a href="http://afrikanblackcoalition.org/2016/04/06/ohio-state-university-is-starving-student-activists/">movient's diands</a>.<br><br>
+		
+		There are, I'm sure, hundreds of questions you can answer using this data. One question that comes to mind - if you act fast enough - might be the identification of the user who created the hashtag and / or the user that appears most often within the hashtag.<br><br>
+
+		I look at this work from the perspective of an archivist most often. For instance: if we can identify a link that appears over and over within a hashtag, how do we make sure that the link lives on and riains accessible both tomorrow and years from now? And, you know, if we can identify trends as they appear on twitter, can we expect that similar content is being created outside of the Internet? And does a common thie within a hashtag lead us to look for these instances? Are there physical documents that reflect the conversation happening online? Videos? Photographs?<br><br>
+
+		If so, how do we track them down?<br><br>
+
+		As someone entering the field within the next few months, I recognize the need to be an archivist who engages with the source, the movient, the creator. When we wait for content, and people, to come to us, we barely get half the story. When we wait, we get content from those who already exist within the narrative and the archive: the privileged, the white, the rich, the well off. But by venturing out of our stale spaces, we meet new voices, and new people, and new histories, and we become part of the history as it is told by those who are living it -- not by those who rewrote it, and not by those act as gatekeepers.<br><br>
+
+		The role of the archivist is changing, I think. And hope. I don't envision a future where archivists work like they did fifty -- or ten -- years ago. People create too much information, too quickly, for us to continue to operate like that, right? And so I hope that the profession turns outward: that our role becomes less custodial in nature and, instead, more educational. That archivists no longer protect what <i>they</i> think should live on, but instead teach communities to assure that the things they create outlive them -- if they want them to. That our archives are no longer confined to a handful of institutions, but instead exist widely: at libraries, at community centers, within families. And I don't think this threatens the field, or our institutions, but instead strengthens them.<br><br>
+
+	To wrap, I'd be remiss if I didn't bring your attention to <a href="https://news.docnow.io/introducing-documenting-the-now-416874c07e0#.lvhvc9ou6">Documenting the Now</a>. Everything I've written about are ideas that the Documenting the Now <a href="https://news.docnow.io/building-docnow-the-team-4349e096b90#.hi2fw3mab">team</a> has been thinking about, and working toward, for a long time. And I'am so excited to watch the work they do, and the conversation they've started, as it develops.</div>
+	<br><a href="http://samantha-abrams.com/">home</a>
