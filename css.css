@@ -18,3 +18,7 @@ H4 {
 .verticalLine {
     border-left: thick solid #909090;
 }
+
+<style>
+a:link {color:blue; background-color:transparent; text-decoration:none}
+a:visited {color:blue; background-color:transparent; text-decoration:none}
