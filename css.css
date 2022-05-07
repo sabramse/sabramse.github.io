@@ -25,5 +25,6 @@ a:visited {color:blue; background-color:transparent; text-decoration:none}
 
 img {
   width: 100%;
+  max-width:300px;
   height: auto;
 }
