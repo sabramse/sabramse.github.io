@@ -3,7 +3,7 @@ body {
 	background-color: white;
 	margin-top: 150px;
 	margin-bottom: 150px;
-	margin-right: 300px;
+	max-width: 600px;
 	margin-left: 300px;
 }
 
