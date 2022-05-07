@@ -8,18 +8,6 @@ body {
   height: 350px;
   margin: 10px;
   padding: 25px;
-  justify-content: center;
-}
-
-.container {
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.item {
-    width: 60em;
 }
 
 * {
