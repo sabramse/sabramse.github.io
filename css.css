@@ -4,15 +4,15 @@ body {
 }
 
 .box {
-  width: 600px;
-  height: 400px;
+  width: 550px;
+  height: 350px;
   margin: 10px;
   padding: 25px;
   justify-content: center;
 }
 
 .container {
-    height: 200px;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
